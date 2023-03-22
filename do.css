@@ -1,0 +1,167 @@
+body {
+    background-color: #fff1ff;
+    font-family: 'Source Sans Pro', sans-serif;
+
+
+}
+
+button {
+    font-size: 14px;
+    padding: 5px 0;
+    margin: 0 10px;
+    transition: all 250ms ease-out;
+
+
+}
+
+ol {
+    list-style: none;
+}
+
+.list {
+    width: 100%;
+    flex: 1;
+}
+
+#todo {
+    width: 370px;
+    min-height: 50vh;
+    /* position: relative; */
+    left: 600px;
+    top: 100px;
+    /* 가로 중앙에 배치 */
+    margin: auto;
+
+
+
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    /* 투두 리스트 안에 글씨가 중앙 정렬 */
+    align-items: center;
+
+
+
+
+
+}
+
+.input_todo {
+
+    border-radius: 10px;
+    text-size-adjust: 20px;
+    height: 25px;
+    /*텍스트 상자 크기 키우기*/
+
+    outline: 2px solid #ffffff;
+}
+
+.input_todo:focus {
+    /*입력칸을 클릭하면 */
+
+    outline: 2px solid #e1bee7;
+}
+
+.todo_add,
+.todo_all,
+.todo_complete,
+.todo_incomplete {
+    border-radius: 10px;
+    border: none;
+    height: 25px;
+    width: 50px;
+    outline: 2px solid #e1bee7;
+}
+
+.todo_delete {
+    all: unset;
+    border: 1px solid #e1bee7;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    color: #ee98fb;
+
+    text-align: center;
+    margin: 0 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -10px;
+
+
+
+}
+
+
+.todo_delete::after {
+    /*삭제 버튼 내용 뒤에 엑스 표시 넣기*/
+    font-family: "FontAwesome";
+    content: " \f00d";
+    font-weight: bold;
+}
+
+
+
+
+.todo_add:hover,
+.todo_all:hover,
+.todo_complete:hover,
+.todo_incomplete:hover {
+    /*버튼을 마우스에 갖다대면*/
+
+    background-color: #e1bee7;
+}
+
+.todo_content {
+
+
+    all: unset;
+    /*버튼 모양 없애기 유의점은 가장 처음에 써줘야함! 뒤에 쓰면 그 위의 스타일이 초기화됨. */
+    color: #ee98fb;
+    font-size: 16px;
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+
+}
+
+.todo-row {
+    /*할일들 추가하면 기록되는 곳*/
+    display: flex;
+    justify-content: space-between;
+    /*바깥 여백을 없앰*/
+    align-items: center;
+    padding: 8px;
+    transition: 200ms;
+
+
+}
+
+
+
+
+/* 할일 클릭 시 밑줄 생김*/
+.todo_content:hover {
+    transition: 500ms;
+    text-decoration: underline;
+    text-decoration-color: #ee98fb;
+}
+
+
+
+/* 할일 완료 시 글씨 색상과 밑줄 색 변화 */
+
+.complete button {
+    color: #e6ceff;
+}
+
+/* 할일 완료시 체크 표시 */
+.complete .todo_delete::after {
+    font-family: "FontAwesome";
+    content: "\f00c";
+}
