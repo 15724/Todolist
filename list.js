@@ -40,7 +40,7 @@ function todoSubmit(event) {
     const newTodo = input.value;
     input.value = "";
 
-    if (newTodo.trim() !== "" && newTodo !== null) {
+    if (newTodo.trim() !== "") {
         addTodo(newTodo);
 
         todos.push({
@@ -167,7 +167,6 @@ function loadTodoAll() {
     btn_completed_clicked = false;
 
     const remainTodoCount = document.querySelectorAll('.todo-row').length;
-    //todos.forEach(e => todoAll.push(e.todo))
 
     if (todos.length > remainTodoCount) {
 
